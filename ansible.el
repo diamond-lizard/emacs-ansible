@@ -307,7 +307,7 @@
           until (f-exists? (f-join current-dir "roles"))
           ;; Return nil if outside the value of
           if (= count ansible-dir-search-limit)
-          do (return nil)
+          do (cl-return nil)
           ;; Or search upper directories.
           else
           do (incf count)
