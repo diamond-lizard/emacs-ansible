@@ -303,7 +303,7 @@
 (defun ansible-find-root-path ()
   "Find ansible directory."
   (let ((current-dir (f-expand default-directory)))
-    (loop with count = 0
+    (cl-loop with count = 0
           until (f-exists? (f-join current-dir "roles"))
           ;; Return nil if outside the value of
           if (= count ansible-dir-search-limit)
