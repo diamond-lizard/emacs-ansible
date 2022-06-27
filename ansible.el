@@ -310,7 +310,7 @@
           do (cl-return nil)
           ;; Or search upper directories.
           else
-          do (incf count)
+          do (cl-incf count)
           (unless (f-root? current-dir)
             (setq current-dir (f-dirname current-dir)))
           finally return current-dir)))
